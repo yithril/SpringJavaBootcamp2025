@@ -1,0 +1,14 @@
+Review Quiz - Answer the following questions:
+
+1. In your own words, what is the command prompt?
+2. What does the command "cd" stand for?
+3. If I want to change my current directory to "C:/Bootcamp/SpringJavaBootcamp2025", what would I type?
+4. What command allows me to see all files in the current directory?
+5. What does "cd .." do?
+6. In your own words what is Git? Is there a difference between GitHub and Git?
+7. A collection of code and files in a single place of storage is called a ____________
+8. What does the command "git clone" do?
+9. What does the command "git pull" do?
+
+BONUS
+10. What do you think the command "git push" does?
