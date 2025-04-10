@@ -1,26 +1,20 @@
-Instructions
+Part 1: String Concatenation with +
 
-    Create a new program. You probably want a folder for morning warmups since this won't be going up to github.
+Create two String variables: one for a person's name, and one for their favorite hobby.
 
-    Inside the main method of your project, do the following:
+Print a sentence using + string concatenation that says something like:
+"Alex enjoys painting in their free time."
+You don't have to print this exact sentence, it's just an example.
 
-    a. Create a Scanner object to read user input. You will need to import the java.util.Scanner class at the beginning of your program.
+Part 2: Using printf with multiple types
 
-    b. Prompt the user to enter the current weather by displaying the message: "How's the weather today? (Sunny, Cloudy, Rainy): "
+Create three variables:
 
-    c. Read the user's input as a String and store it in a variable (e.g., userInput).
+a String for a movie name
 
-    d. Use if/else-if/else statements to check the value of userInput and provide the following responses based on the weather conditions:
-        If userInput is "Sunny" (case-insensitive), print: "It's a great day for outdoor activities!"
-        If userInput is "Cloudy" (case-insensitive), print: "The weather is a bit uncertain."
-        If userInput is "Rainy" (case-insensitive), print: "Don't forget your umbrella!"
-        If userInput doesn't match any of the above conditions, print: "Sorry, I'm not sure about that weather type."
+an int for the release year
 
+a double for the rating (like 8.5)
 
-    Test your program by running it and entering different weather conditions as input. Make sure it provides the correct responses for each condition.
-
-    Try entering a weather condition that is not "Sunny," "Cloudy," or "Rainy" to see how your program handles it.
-
-    Once you've completed the program and tested it thoroughly, you're done!
-
-BONUS: Can you re-write your code with a switch statement?
+Use System.out.printf to print a sentence like:
+"Inception was released in 2010 and has a rating of 8.5."
