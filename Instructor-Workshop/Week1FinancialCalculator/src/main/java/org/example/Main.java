@@ -29,6 +29,7 @@ public class Main {
                         break;
                     case 0:
                         System.out.println("Thank you for using the Financial Calculator!");
+                        System.exit(0);
                         return;
                     default:
                         System.out.println("Invalid option. Please choose between 0 and 3.");
