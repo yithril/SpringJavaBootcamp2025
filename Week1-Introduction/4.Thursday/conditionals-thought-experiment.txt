@@ -1,0 +1,60 @@
+Scenario 1: Library Late Fee (Simple if / else)
+A student returns a library book.
+
+Rules:
+
+If the book is late, charge a $5 late fee.
+
+If the book is on time, thank the student for returning it promptly.
+
+Questions:
+
+What are the possible outcomes?
+
+What condition must be checked?
+
+Is there a middle ground or just two paths?
+
+Scenario 2: Amusement Park Ride Height Check (if / else if / else)
+You are checking if someone is tall enough to ride.
+
+Rules:
+
+If the person is taller than 60 inches, they can ride alone.
+
+If the person is between 48 and 60 inches, they can ride with an adult.
+
+If they are under 48 inches, they cannot ride.
+
+Questions:
+
+What are the three outcomes?
+
+What measurements mark the transition between categories?
+
+Would it matter if someone is exactly 48 or 60 inches?
+
+Scenario 3: Food Menu Selector (Multiple else if branches)
+A cafeteria app suggests a meal based on the day of the week.
+
+Rules:
+
+Monday: Spaghetti
+
+Tuesday: Tacos
+
+Wednesday: Chicken
+
+Thursday: Burgers
+
+Friday: Pizza
+
+Any other day: "No school lunch today"
+
+Questions:
+
+How many possible branches are there?
+
+What happens if someone enters "saturday" in lowercase?
+
+Is this logic scalable if the school starts rotating menus every month?
