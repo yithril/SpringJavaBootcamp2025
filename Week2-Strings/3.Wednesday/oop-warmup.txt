@@ -1,0 +1,42 @@
+Java Warm-Up: Appointment Class
+Today, you will design a class that models a real-life scenario: scheduling an appointment. This activity will help you practice building classes, creating multiple constructors, 
+and designing a simple custom method.
+
+Scenario:
+You're helping build a scheduling system for a local business. Sometimes, appointments are fully scheduled with a date and time. Other times, someone calls in and just wants to 
+request a service — without finalizing a time yet.
+
+Step-by-Step Instructions:
+1. Create a class called Appointment with the following private fields:
+String clientName
+
+String date (e.g., "2025-04-16")
+
+String time (e.g., "10:30 AM")
+
+String serviceType (e.g., "Checkup", "Haircut", "Math Tutoring")
+
+2. Use IntelliJ's generator to:
+Create a constructor with all four fields.
+
+Generate getters and setters for all fields.
+
+3. Add a second constructor (write this yourself):
+Imagine this scenario:
+
+A client calls and wants to request a service but isn't ready to set a date and time yet. You only collect their name and the service type.
+
+Write a second constructor that takes only clientName and serviceType.
+
+Challenge #1
+In this constructor, set date and time to "TBD" because we never got that information from the customer (How would you do this?)
+
+Challenge #2
+
+Description:
+This method should return true if the appointment has both a confirmed date and time (i.e., not "TBD"). Otherwise, it should return false.
+HINT: If the appointment has no date and no time...then what would be the value of the date and time properties?
+
+
+
+
