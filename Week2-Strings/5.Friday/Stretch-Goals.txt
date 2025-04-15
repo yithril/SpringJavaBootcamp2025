@@ -1,0 +1,25 @@
+What You Need to Do to Exceed Expectations (Score a 5)
+To earn a 5 on this project, your program must:
+
+Complete everything required for a 3 (pass)
+Add one of the following stretch goals:
+
+Stretch Goal Options (Pick One):
+1. Search by Title or ISBN
+Add an option to search the book inventory.
+
+The user can enter part of a title or ISBN to find matching books.
+
+Show whether the book is available or checked out.
+
+2. Add Due Dates
+When a book is checked out, assign a due date (e.g., 14 days from today).
+
+Display the due date when showing checked out books.
+
+3. Track Checkouts Per User
+Create a User class or use a data structure to track which user has which books.
+
+Show a list of all books a specific user has checked out.
+
+Optional: limit the number of books a user can check out at once (e.g., 3 max).

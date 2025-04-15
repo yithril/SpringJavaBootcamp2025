@@ -1,0 +1,18 @@
+Java Warm-Up: String Method Review
+
+Instructions:
+1. Create a new IntelliJ project in your warmup folder called StringWarmup.
+2. In the main method, complete the following steps using the string methods: trim, toUpperCase, toLowerCase, and length.
+
+Tasks:
+- Create a string called messyString with this value (yes, keep the extra white space):
+     "   Hello Java Students!   "
+- Print the original string and its length.
+- Use trim() to remove extra spaces. Print the trimmed string and its new length.
+- Convert the trimmed string to all uppercase and print the result.
+- Convert the trimmed string to all lowercase and print the result.
+
+Comment Questions (write your answers as comments in the code):
+1. What did trim() do to the string?
+2. What is the difference between toUpperCase() and toLowerCase()?
+3. Why did the length change after using trim()?
