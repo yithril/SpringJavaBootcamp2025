@@ -13,6 +13,7 @@ public class Person {
         this.height = height;
     }
 
+    //methods
     public String getName() {
         return name;
     }
@@ -43,5 +44,11 @@ public class Person {
 
     public void setHeight(float height) {
         this.height = height;
+    }
+
+    //custom methods come after getters and setters
+    //make a method for the person to introduce themselves
+    public void selfIntroduction(){
+        System.out.println("Hi my name is " + this.name);
     }
 }

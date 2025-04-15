@@ -11,5 +11,9 @@ public class Main {
                 1900, true, 100000);
 
         Book book = new Book("Last Question", 20, author, publisher);
+
+        Person person = new Person("Bob", 50, 200, 5.11f);
+
+        person.selfIntroduction();
     }
 }
