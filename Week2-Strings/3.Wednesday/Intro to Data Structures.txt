@@ -1,0 +1,20 @@
+Intro to Data Structures – Student Questions
+
+In your own words, what is a data structure?
+
+Why do programmers use data structures? What problems do they help solve?
+
+What are a few examples of data structures mentioned in the video?
+
+What does the video say about choosing the "right" data structure?
+
+How does the video explain the difference between fast and slow operations?
+
+What does the term “time complexity” refer to?
+
+Why might someone choose a data structure that is slower to access but more flexible?
+
+
+What might happen if you pick the wrong data structure for a program?
+
+What are some questions a developer should ask themselves when deciding which data structure to use?

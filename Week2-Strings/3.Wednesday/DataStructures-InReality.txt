@@ -1,0 +1,41 @@
+Exploring Data Representation in Real Life
+
+Below are a list of real-world examples. For each one, answer the following questions:
+
+Questions:
+
+What kind of data is being stored or tracked here?
+
+How does data get added?
+
+How does data get retrieved or used?
+
+If something needs to be updated or removed, how would that work?
+
+How is the data organized?
+
+Examples:
+
+A grocery list
+
+A set of apartment mailboxes
+
+A class attendance sheet
+
+A phone book (paper or digital)
+
+A deck of cards
+
+A vending machine
+
+A bookshelf in a library
+
+A schedule for school classes
+
+A customer order line at a coffee shop
+
+A password manager app
+
+Follow-up discussion (after answering): Once everyone has answered for a few examples, we’ll talk about how many of these examples map to data structures in programming. You’ll be surprised to find out that things like lists, queues, stacks, and dictionaries are all around us—you just didn’t know their names yet.
+
+Then we’ll take a deeper look at the simplest one of them all: the array.
