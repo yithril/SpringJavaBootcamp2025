@@ -36,6 +36,9 @@ public class Main {
                 case 1:
                     displayCars(inventory);
                     break;
+                case 2:
+                    searchByMakeAndModel(inventory, scanner);
+                    break;
                 case 6:
                     System.exit(0);
                     break;
@@ -53,7 +56,20 @@ public class Main {
             Vehicle currentVehicle = inventory[i];
             //there are two options -> currentVehicle is null, or it isn't
             if(currentVehicle != null){
-                System.out.println(currentVehicle.getMakeModel());
+                System.out.println(currentVehicle.toString());
+            }
+        }
+    }
+
+    public static void searchByMakeAndModel(Vehicle[] inventory, Scanner scanner){
+        System.out.println("What make and model of car do you want?");
+        scanner.nextLine();
+        String makeModel = scanner.nextLine();
+
+        for(int i = 0; i < inventory.length; i++){
+            Vehicle currentVehicle = inventory[i];
+            if(currentVehicle != null && currentVehicle.getMakeModel().equalsIgnoreCase(makeModel)){
+                System.out.println(currentVehicle.toString());
             }
         }
     }
