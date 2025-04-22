@@ -14,22 +14,33 @@ public class Main {
             System.out.println(("1) Goldilocks"));
             System.out.println(("2) Mary Had a Little Lamb"));
             System.out.println("3) Hansel and Gretel");
+            System.out.println("4) Quit the program");
 
-            int userInput = scanner.nextInt();
+            try{
+                int userInput = scanner.nextInt();
 
-            switch(userInput){
-                case 1:
-                    readStory("src/main/resources/goldilocks.txt");
-                    break;
-                case 2:
-                    readStory("src/main/resources/hansel_and_gretel.txt");
-                    break;
-                case 3:
-                    readStory("src/main/resources/mary_had_a_little_lamb.txt");
-                    break;
-                default:
-                    System.out.println("That's not a choice");
-                    break;
+                switch(userInput){
+                    //each story has a slightly different filePath
+                    case 1:
+                        readStory("src/main/resources/goldilocks.txt");
+                        break;
+                    case 2:
+                        readStory("src/main/resources/hansel_and_gretel.txt");
+                        break;
+                    case 3:
+                        readStory("src/main/resources/mary_had_a_little_lamb.txt");
+                        break;
+                    case 4:
+                        System.out.println("See ya!");
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("That's not a choice");
+                        break;
+                }
+            }
+            catch(Exception ex){
+                System.out.println();
             }
         }
 
