@@ -48,6 +48,7 @@ public class Main {
     }
 
     public static void readStory(String filePath){
+
         try{
             FileReader fileReader = new FileReader(filePath);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
