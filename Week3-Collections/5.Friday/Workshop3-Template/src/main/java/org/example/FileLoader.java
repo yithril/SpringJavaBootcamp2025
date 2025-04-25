@@ -1,8 +1,6 @@
 package org.example;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +36,34 @@ public class FileLoader {
             System.out.println("Failed to load csv file.");
             ex.printStackTrace();
             return new ArrayList<>();
+        }
+    }
+
+    //File writing example
+    public static void writeFile(List<Product> productList) {
+        try {
+            FileWriter fileWriter = new FileWriter("src/main/resources/products.csv");
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+            // Write the header
+            bufferedWriter.write("SKU|Product Name|Price|Department");
+            bufferedWriter.newLine();
+
+            // Write product rows
+            for (Product product : productList) {
+                String line = product.getSku() + "|" +
+                        product.getProductName() + "|" +
+                        product.getPrice() + "|" +
+                        product.getDepartment();
+                bufferedWriter.write(line);
+                bufferedWriter.newLine();
+            }
+
+            // Close the writer
+            bufferedWriter.close();
+        } catch (IOException ex) {
+            System.out.println("Failed to write to csv file.");
+            ex.printStackTrace();
         }
     }
 }
