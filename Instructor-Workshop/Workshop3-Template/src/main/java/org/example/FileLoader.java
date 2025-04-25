@@ -40,5 +40,4 @@ public class FileLoader {
             return new ArrayList<>();
         }
     }
-
 }
