@@ -49,6 +49,7 @@ public class Main {
                     break;
                 case 8:
                     // Display total and thank the user
+                    checkOut(cart, scanner);
                     break;
                 case 9:
                     System.exit(0);
@@ -57,6 +58,15 @@ public class Main {
                     System.out.println("Invalid option");
             }
         }
+    }
+
+    public static void checkOut(ShoppingCart cart, Scanner scanner){
+        //Display how much the cart total
+        //Ask them to pay and how much they are paying
+        //If they don't pay enough, tell them its not enough and try again
+        //else they paid equal to or more, so tell them their change
+        //print out what items they bought, how much they paid, and chane
+        //clear the cart
     }
 
     //This method could be re-used over and over again if you play
@@ -81,7 +91,8 @@ public class Main {
     }
 
     // Returns a list of products within the given price range (inclusive)
-    public static List<Product> filterByPriceRange(List<Product> products, double min, double max) {
+    public static List<Product> filterByPriceRange(List<Product> products,
+                                                   double min, double max) {
         List<Product> matches = new ArrayList<>();
         // TODO: Loop through products
         // If product price is between min and max, add to matches

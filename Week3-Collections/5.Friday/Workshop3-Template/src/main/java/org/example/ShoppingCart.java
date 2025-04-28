@@ -37,4 +37,8 @@ public class ShoppingCart {
     public void displayItems(){
         // Your code here
     }
+
+    public List<Product> getCartItems(){
+        return products;
+    }
 }
