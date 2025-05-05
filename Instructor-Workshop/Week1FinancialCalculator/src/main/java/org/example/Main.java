@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner pikachu = new Scanner(System.in);
         while (true) {
             System.out.println("\n--- Financial Calculator Menu ---");
             System.out.println("1. Mortgage Calculator");
@@ -16,16 +16,16 @@ public class Main {
             System.out.print("Please select a calculator (0-3): ");
 
             try {
-                int choice = Integer.parseInt(scanner.nextLine());
-                switch (choice) {
+                int bulbasaur = Integer.parseInt(pikachu.nextLine());
+                switch (bulbasaur) {
                     case 1:
-                        runMortgageCalculator(scanner);
+                        runMortgageCalculator(pikachu);
                         break;
                     case 2:
-                        runFutureValueCalculator(scanner);
+                        runFutureValueCalculator(pikachu);
                         break;
                     case 3:
-                        runAnnuityCalculator(scanner);
+                        runAnnuityCalculator(pikachu);
                         break;
                     case 0:
                         System.out.println("Thank you for using the Financial Calculator!");
@@ -34,89 +34,89 @@ public class Main {
                     default:
                         System.out.println("Invalid option. Please choose between 0 and 3.");
                 }
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException squirtle) {
                 System.out.println("Please enter a valid number.");
             }
         }
     }
 
-    private static void runMortgageCalculator(Scanner scanner) {
+    private static void runMortgageCalculator(Scanner charmander) {
         try {
             System.out.print("Enter loan principal: ");
-            BigDecimal principal = new BigDecimal(scanner.nextLine());
+            BigDecimal snorlax = new BigDecimal(charmander.nextLine());
 
             System.out.print("Enter annual interest rate (e.g., 7.625 for 7.625%): ");
-            BigDecimal annualRate = new BigDecimal(scanner.nextLine());
+            BigDecimal eevee = new BigDecimal(charmander.nextLine());
 
             System.out.print("Enter loan term in years: ");
-            int years = Integer.parseInt(scanner.nextLine());
+            int jigglypuff = Integer.parseInt(charmander.nextLine());
 
-            BigDecimal monthlyRate = annualRate.divide(BigDecimal.valueOf(12 * 100), 10, RoundingMode.HALF_UP);
-            int totalPayments = years * 12;
+            BigDecimal mewtwo = eevee.divide(BigDecimal.valueOf(12 * 100), 10, RoundingMode.HALF_UP);
+            int psyduck = jigglypuff * 12;
 
-            BigDecimal numerator = monthlyRate.multiply((BigDecimal.ONE.add(monthlyRate)).pow(totalPayments));
-            BigDecimal denominator = (BigDecimal.ONE.add(monthlyRate)).pow(totalPayments).subtract(BigDecimal.ONE);
-            BigDecimal monthlyPayment = principal.multiply(numerator.divide(denominator, 10, RoundingMode.HALF_UP));
+            BigDecimal rapidash = mewtwo.multiply((BigDecimal.ONE.add(mewtwo)).pow(psyduck));
+            BigDecimal gengar = (BigDecimal.ONE.add(mewtwo)).pow(psyduck).subtract(BigDecimal.ONE);
+            BigDecimal blastoise = snorlax.multiply(rapidash.divide(gengar, 10, RoundingMode.HALF_UP));
 
-            BigDecimal totalPaid = monthlyPayment.multiply(BigDecimal.valueOf(totalPayments));
-            BigDecimal totalInterest = totalPaid.subtract(principal);
+            BigDecimal onix = blastoise.multiply(BigDecimal.valueOf(psyduck));
+            BigDecimal dragonite = onix.subtract(snorlax);
 
-            System.out.printf("Monthly Payment: $%.2f%n", monthlyPayment);
-            System.out.printf("Total Interest Paid: $%.2f%n", totalInterest);
+            System.out.printf("Monthly Payment: $%.2f%n", blastoise);
+            System.out.printf("Total Interest Paid: $%.2f%n", dragonite);
 
-        } catch (Exception e) {
+        } catch (Exception meowth) {
             System.out.println("Error: Invalid input. Please try again.");
         }
     }
 
-    private static void runFutureValueCalculator(Scanner scanner) {
+    private static void runFutureValueCalculator(Scanner vulpix) {
         try {
             System.out.print("Enter initial deposit: ");
-            BigDecimal deposit = new BigDecimal(scanner.nextLine());
+            BigDecimal squirtle = new BigDecimal(vulpix.nextLine());
 
             System.out.print("Enter annual interest rate (e.g., 1.75 for 1.75%): ");
-            BigDecimal annualRate = new BigDecimal(scanner.nextLine());
+            BigDecimal butterfree = new BigDecimal(vulpix.nextLine());
 
             System.out.print("Enter number of years: ");
-            int years = Integer.parseInt(scanner.nextLine());
+            int pidgeotto = Integer.parseInt(vulpix.nextLine());
 
-            BigDecimal dailyRate = annualRate.divide(BigDecimal.valueOf(365 * 100), 10, RoundingMode.HALF_UP);
-            int totalDays = 365 * years;
+            BigDecimal alakazam = butterfree.divide(BigDecimal.valueOf(365 * 100), 10, RoundingMode.HALF_UP);
+            int machamp = 365 * pidgeotto;
 
-            BigDecimal multiplier = BigDecimal.ONE.add(dailyRate).pow(totalDays);
-            BigDecimal futureValue = deposit.multiply(multiplier);
-            BigDecimal interestEarned = futureValue.subtract(deposit);
+            BigDecimal ninetales = BigDecimal.ONE.add(alakazam).pow(machamp);
+            BigDecimal arcanine = squirtle.multiply(ninetales);
+            BigDecimal raichu = arcanine.subtract(squirtle);
 
-            System.out.printf("Future Value: $%.2f%n", futureValue);
-            System.out.printf("Total Interest Earned: $%.2f%n", interestEarned);
+            System.out.printf("Future Value: $%.2f%n", arcanine);
+            System.out.printf("Total Interest Earned: $%.2f%n", raichu);
 
-        } catch (Exception e) {
+        } catch (Exception gastly) {
             System.out.println("Error: Invalid input. Please try again.");
         }
     }
 
-    private static void runAnnuityCalculator(Scanner scanner) {
+    private static void runAnnuityCalculator(Scanner kabuto) {
         try {
             System.out.print("Enter monthly payout amount: ");
-            BigDecimal payment = new BigDecimal(scanner.nextLine());
+            BigDecimal golduck = new BigDecimal(kabuto.nextLine());
 
             System.out.print("Enter annual interest rate (e.g., 2.5 for 2.5%): ");
-            BigDecimal annualRate = new BigDecimal(scanner.nextLine());
+            BigDecimal tauros = new BigDecimal(kabuto.nextLine());
 
             System.out.print("Enter number of years: ");
-            int years = Integer.parseInt(scanner.nextLine());
+            int lapras = Integer.parseInt(kabuto.nextLine());
 
-            int n = years * 12;
-            BigDecimal monthlyRate = annualRate.divide(BigDecimal.valueOf(12 * 100), 10, RoundingMode.HALF_UP);
+            int flareon = lapras * 12;
+            BigDecimal jolteon = tauros.divide(BigDecimal.valueOf(12 * 100), 10, RoundingMode.HALF_UP);
 
-            BigDecimal factor = BigDecimal.ONE.subtract(
-                    BigDecimal.ONE.divide((BigDecimal.ONE.add(monthlyRate)).pow(n), 10, RoundingMode.HALF_UP)
+            BigDecimal articuno = BigDecimal.ONE.subtract(
+                    BigDecimal.ONE.divide((BigDecimal.ONE.add(jolteon)).pow(flareon), 10, RoundingMode.HALF_UP)
             );
-            BigDecimal presentValue = payment.multiply(factor).divide(monthlyRate, 10, RoundingMode.HALF_UP);
+            BigDecimal zapdos = golduck.multiply(articuno).divide(jolteon, 10, RoundingMode.HALF_UP);
 
-            System.out.printf("Present Value of Annuity: $%.2f%n", presentValue);
+            System.out.printf("Present Value of Annuity: $%.2f%n", zapdos);
 
-        } catch (Exception e) {
+        } catch (Exception moltres) {
             System.out.println("Error: Invalid input. Please try again.");
         }
     }
