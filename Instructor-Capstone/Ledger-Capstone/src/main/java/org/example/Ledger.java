@@ -44,6 +44,7 @@ public class Ledger {
         List<Transaction> transactions = FileManager.readFile();
         List<Transaction> vendorMatches = new ArrayList<>();
 
+        int x = 5;
         for (Transaction t : transactions) {
             if (t.getVendor().equalsIgnoreCase(vendor)) {
                 vendorMatches.add(t);
