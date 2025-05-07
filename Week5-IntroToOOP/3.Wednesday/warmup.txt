@@ -1,15 +1,19 @@
-Scenario: Imagine you're designing a Restaurant Management System. In this system, there are different components, such as chefs, customers, menus, and orders. Your task is to identify the relationships between these objects.
+Let's practice writing method signatures and getting used to the vocabulray. 
+For the following methods, you can just write the signature, you don't need to write
+the inside of the method (the implementation, or logic). This is to see if you remember how to structure the method signature.
 
-    Step 1: Identify Objects
-        Take a few minutes to list the various objects you might encounter in a restaurant management system (e.g., Chef, Customer, Menu, Order, Restaurant).
+1. Write a public method called findMax that takes an array of integers and returns the largest value as an int.
 
-    Step 2: Identify Relationships
-        Think about how these objects relate to each other. For instance, a restaurant can have many chefs, and an order can contain multiple menu items.
-        Determine whether the relationship is:
-            One-to-One: An instance of class A has a single instance of class B.
-            One-to-Many: An instance of class A has multiple instances of class B.
-            Many-to-One: Multiple instances of class A relate to a single instance of class B.
-            Many-to-Many: Multiple instances of class A relate to multiple instances of class B.
+2. Write a private method called printNames that receives a List<String> and prints each name to the console.
 
-    Step 3: Suggest Data Structures
-        Based on the relationships you identified, suggest which data structures you would use to model them (e.g., arrays, ArrayList, HashMap, HashSet).
+3. Write a public method called addNumbers that takes two double numbers and returns their sum as a double.
+
+4. Write a private method called isSystemActive that takes no parameters and returns true if the system is active, false otherwise.
+
+5. Write a public method called repeatCharacters that takes a String and an int, and returns a List<Character> containing the characters of the string repeated the given number of times.
+
+6. Write a private method called showWelcomeMessage that takes no parameters and displays a welcome message on the console.
+
+7. Write a public method called joinStrings that takes an array of String objects and returns a single String with all the elements joined together.
+
+8. Write a private method called filterBelowThreshold that takes a List<Integer> and an int threshold and removes all numbers below the threshold from the list.
