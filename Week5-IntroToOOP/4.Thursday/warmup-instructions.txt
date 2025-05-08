@@ -14,6 +14,15 @@ The functionality we need to test is:
 Our bank has a policy of charging an overdraft fee if a user withdraws an amount that would make their balance
 negative. We also do not allow a user to withdraw money if it would bring their account to less than -200 (before overdraft is applied).
 
-You will need to write unit tests to handle these scenarios. I am not going to spell out all the scenarios, you'll need
-to figure them out, and then write appropriate unit tests using Arrange-Act-Assert.
+Do NOT change any code in the BankAccount class.
+
+You will need to write unit tests to handle scenarios where the user deposits a positive amount of money, and the different
+scenarios for withdrawing money.
+
+EXTRA CREDIT: 
+What happens if the user tries to deposit a negative amount of money? What does the code say to do?
+
+Write a unit test to check that calling
+deposit(-50) throws an IllegalArgumentException.
+Hint: Look into assertThrows in JUnit 5.
 
