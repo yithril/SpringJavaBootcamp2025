@@ -54,9 +54,4 @@ public class Room {
             return false;
         }
     }
-
-    public double addTwoNumbers(double a, double b){
-        double sum = a + b;
-        return sum;
-    }
 }
