@@ -1,0 +1,25 @@
+Warmup Activity: Identify the Relationships
+
+Many to many, many to one, one to many, one to one, none
+
+Remember many to one/one to many is from the perspective of the class you're talking about
+
+    Car and Engine
+
+    Author and Books
+
+    Book and Genre
+
+    Student and Extracurricular Clubs
+
+    Department and Employees
+
+    Player and Sports Team
+
+    Computer and Monitor
+
+    Library and Books
+
+    Country and Currency
+
+    Conference and Attendees
