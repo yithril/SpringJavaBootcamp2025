@@ -1,0 +1,19 @@
+For this morning's warmup, we're going to use premade code to write unit tests.
+Please take the Warmup project folder and COPY it to your computer (don't move it, copy/paste it please)
+You can put it in your warmup or code along folder. Then, in IntelliJ open up the warmup folder
+after you've moved it.
+
+You'll see a BankAccount class. I'm going to have you test it out. You will need to generate a test class and install JUnit which
+we learned in class on Wednesday.
+
+The functionality we need to test is:
+
+1. Depositing money
+2. Withdrawing money
+
+Our bank has a policy of charging an overdraft fee if a user withdraws an amount that would make their balance
+negative. We also do not allow a user to withdraw money if it would bring their account to less than -200 (before overdraft is applied).
+
+You will need to write unit tests to handle these scenarios. I am not going to spell out all the scenarios, you'll need
+to figure them out, and then write appropriate unit tests using Arrange-Act-Assert.
+
