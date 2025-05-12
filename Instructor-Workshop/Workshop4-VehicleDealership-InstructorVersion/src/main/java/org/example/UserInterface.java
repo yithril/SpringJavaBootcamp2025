@@ -15,6 +15,13 @@ public class UserInterface {
     private void init(){
         DealershipFileManager fileManager = new DealershipFileManager();
         this.dealership = fileManager.getDealership();
+
+        if (this.dealership == null) {
+            System.out.println("ERROR: The dealership data file is missing or malformed.");
+            System.out.println("Please ensure 'vehicles.csv' exists and has the correct format.");
+            System.out.println("The application cannot continue.");
+            System.exit(1);
+        }
     }
 
     public void display(){
