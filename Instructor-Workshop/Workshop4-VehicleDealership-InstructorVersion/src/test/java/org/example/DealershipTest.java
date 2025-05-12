@@ -17,9 +17,9 @@ class DealershipTest {
 
     @Test
     public void testGetVehiclesByPrice() {
-        Vehicle vehicle1 = new Vehicle(1, 2020, "Toyota", "Camry", "Red", "Sedan", 15000, 25000.0);
-        Vehicle vehicle2 = new Vehicle(2, 2019, "Honda", "Civic", "Blue", "Sedan", 12000, 20000.0);
-        Vehicle vehicle3 = new Vehicle(3, 2021, "Ford", "F-150", "Black", "Truck", 10000, 35000.0);
+        Vehicle vehicle1 = new Vehicle(1, 2020, "Toyota", "Camry", "Red", VehicleType.SEDAN, 15000, 25000.0);
+        Vehicle vehicle2 = new Vehicle(2, 2019, "Honda", "Civic", "Blue", VehicleType.SEDAN, 12000, 20000.0);
+        Vehicle vehicle3 = new Vehicle(3, 2021, "Ford", "F-150", "Black", VehicleType.TRUCK, 10000, 35000.0);
 
         dealership.addVehicle(vehicle1);
         dealership.addVehicle(vehicle2);
@@ -35,9 +35,9 @@ class DealershipTest {
 
     @Test
     public void testGetVehiclesByMakeModel() {
-        Vehicle vehicle1 = new Vehicle(1, 2020, "Toyota", "Camry", "Red", "Sedan", 15000, 25000.0);
-        Vehicle vehicle2 = new Vehicle(2, 2019, "Honda", "Civic", "Blue", "Sedan", 12000, 20000.0);
-        Vehicle vehicle3 = new Vehicle(3, 2021, "Toyota", "Corolla", "Silver", "Sedan", 10000, 22000.0);
+        Vehicle vehicle1 = new Vehicle(1, 2020, "Toyota", "Camry", "Red", VehicleType.SEDAN, 15000, 25000.0);
+        Vehicle vehicle2 = new Vehicle(2, 2019, "Honda", "Civic", "Blue", VehicleType.SEDAN, 12000, 20000.0);
+        Vehicle vehicle3 = new Vehicle(3, 2021, "Ford", "F-150", "Black", VehicleType.TRUCK, 10000, 35000.0);
 
         dealership.addVehicle(vehicle1);
         dealership.addVehicle(vehicle2);
@@ -51,7 +51,7 @@ class DealershipTest {
 
     @Test
     public void testAddVehicle() {
-        Vehicle vehicle = new Vehicle(1, 2020, "Toyota", "Camry", "Red", "Sedan", 15000, 25000.0);
+        Vehicle vehicle = new Vehicle(1, 2020, "Toyota", "Camry", "Red", VehicleType.SEDAN, 15000, 25000.0);
 
         dealership.addVehicle(vehicle);
         List<Vehicle> vehicles = dealership.getAllVehicles();
@@ -61,7 +61,7 @@ class DealershipTest {
 
     @Test
     public void testRemoveVehicle() {
-        Vehicle vehicle = new Vehicle(1, 2020, "Toyota", "Camry", "Red", "Sedan", 15000, 25000.0);
+        Vehicle vehicle = new Vehicle(1, 2020, "Toyota", "Camry", "Red", VehicleType.SEDAN, 15000, 25000.0);
 
         dealership.addVehicle(vehicle);
         dealership.removeVehicle(vehicle);

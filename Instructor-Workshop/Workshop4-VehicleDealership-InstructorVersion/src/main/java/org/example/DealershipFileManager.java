@@ -7,29 +7,72 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class DealershipFileManager {
-    public Dealership getDealership(){
-        Dealership dealership = new Dealership("Hop Motors", "123 Wherever St.", "555-1234");
 
-        try{
-            FileInputStream fs = new FileInputStream("src/main/resources/vehicles.csv");
+    public Dealership getDealership() {
+        Dealership dealership = null;
+        FileInputStream fs = null;
+        Scanner scanner = null;
 
-            Scanner scanner = new Scanner(fs);
+        try {
+            fs = new FileInputStream("src/main/resources/vehicles.csv");
+            scanner = new Scanner(fs);
 
-            //skip first line
-            scanner.nextLine();
+            // Read first line: dealership info
+            if (scanner.hasNextLine()) {
+                String header = scanner.nextLine();
+                String[] dealershipInfo = header.split("\\|");
 
-            String input;
-            while(scanner.hasNextLine()){
-                input = scanner.nextLine();
-                String[] dataRow = input.split("\\|");
-                Vehicle vehicle = new Vehicle(Integer.parseInt(dataRow[0]), Integer.parseInt(dataRow[1]), dataRow[2],
-                        dataRow[3], dataRow[5], dataRow[4], Integer.parseInt(dataRow[6]), Double.parseDouble(dataRow[7]));
+                if (dealershipInfo.length != 3) {
+                    System.out.println("ERROR: Dealership header line is malformed. Program cannot continue.");
+                    return null; // fail fast – let the caller handle null if needed
+                }
 
-                dealership.addVehicle(vehicle);
+                dealership = new Dealership(
+                        dealershipInfo[0].trim(),
+                        dealershipInfo[1].trim(),
+                        dealershipInfo[2].trim()
+                );
+            } else {
+                System.out.println("ERROR: File is empty. Program cannot continue.");
+                return null;
             }
-        }
-        catch(FileNotFoundException ex){
-            System.out.println("Couldn't find the file to read from sorry.");
+
+            // Read and parse each vehicle
+            while (scanner.hasNextLine()) {
+                String input = scanner.nextLine();
+                String[] dataRow = input.split("\\|");
+
+                try {
+                    if (dataRow.length != 8) {
+                        throw new IllegalArgumentException("Expected 8 columns but got " + dataRow.length);
+                    }
+
+                    int vin = Integer.parseInt(dataRow[0]);
+                    int year = Integer.parseInt(dataRow[1]);
+                    String make = dataRow[2];
+                    String model = dataRow[3];
+                    VehicleType type = VehicleType.valueOf(dataRow[4].trim().toUpperCase());
+                    String color = dataRow[5];
+                    int odometer = Integer.parseInt(dataRow[6]);
+                    double price = Double.parseDouble(dataRow[7]);
+
+                    Vehicle vehicle = new Vehicle(vin, year, make, model, color, type, odometer, price);
+                    dealership.addVehicle(vehicle);
+
+                } catch (Exception e) {
+                    System.out.println("Skipping bad vehicle row: " + input);
+                    System.out.println("Reason: " + e.getMessage());
+                }
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found. Using default dealership info.");
+            dealership = new Dealership("Hop Motors", "123 Wherever St.", "555-1234");
+
+        } finally {
+            if (scanner != null) {
+                scanner.close();
+            }
         }
 
         return dealership;
@@ -37,6 +80,7 @@ public class DealershipFileManager {
 
     public void saveDealership(Dealership dealership){
         try{
+            //This is not in append mode so it will overwrite the whole file
             FileWriter fw = new FileWriter("src/main/resources/vehicles.csv");
 
             //Write the header

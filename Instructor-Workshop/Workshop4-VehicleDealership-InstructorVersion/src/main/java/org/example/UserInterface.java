@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -205,7 +206,10 @@ public class UserInterface {
             try {
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("Enter the vehicle type you are looking for:");
-                String vehicleType = scanner.nextLine();
+                System.out.println("Available types: " + Arrays.toString(VehicleType.values()));
+
+                String input = scanner.nextLine().trim().toUpperCase();
+                VehicleType vehicleType = VehicleType.valueOf(input);
 
                 List<Vehicle> vehicleList = dealership.getVehiclesByType(vehicleType);
                 displayVehicles(vehicleList);
@@ -243,8 +247,16 @@ public class UserInterface {
                 System.out.println("Enter color:");
                 String color = scanner.nextLine();
 
-                System.out.println("Enter vehicle type:");
-                String vehicleType = scanner.nextLine();
+                VehicleType vehicleType = null;
+                while (vehicleType == null) {
+                    System.out.println("Enter vehicle type (e.g., SUV, TRUCK, SEDAN):");
+                    String vehicleTypeInput = scanner.nextLine().trim().toUpperCase();
+                    try {
+                        vehicleType = VehicleType.valueOf(vehicleTypeInput);
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Invalid vehicle type. Please try again.");
+                    }
+                }
 
                 System.out.println("Enter odometer reading:");
                 int odometer = scanner.nextInt();

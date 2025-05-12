@@ -6,11 +6,11 @@ public class Vehicle {
     private String make;
     private String model;
     private String color;
-    private String vehicleType;
+    private VehicleType vehicleType;
     private int odometer;
     private double price;
 
-    public Vehicle(int vin, int year, String make, String model, String color, String vehicleType, int odometer, double price) {
+    public Vehicle(int vin, int year, String make, String model, String color, VehicleType vehicleType, int odometer, double price) {
         this.vin = vin;
         this.year = year;
         this.make = make;
@@ -61,11 +61,11 @@ public class Vehicle {
         this.color = color;
     }
 
-    public String getVehicleType() {
+    public VehicleType getVehicleType() {
         return vehicleType;
     }
 
-    public void setVehicleType(String vehicleType) {
+    public void setVehicleType(VehicleType vehicleType) {
         this.vehicleType = vehicleType;
     }
 
