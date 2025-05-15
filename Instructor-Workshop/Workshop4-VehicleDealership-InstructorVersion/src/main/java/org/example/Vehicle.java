@@ -87,6 +87,7 @@ public class Vehicle {
 
     @Override
     public String toString(){
+        Object object = new Object();
         return String.format("%d|%d|%s|%s|%s|%s|%d|%f", this.getVin(), this.getYear(), this.getMake(), this.getModel(),
                 this.getColor(), this.getVehicleType(), this.getOdometer(), this.getPrice());
     }

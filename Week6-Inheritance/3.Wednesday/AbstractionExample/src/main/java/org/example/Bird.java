@@ -1,4 +1,8 @@
 package org.example;
 
-public class Bird {
+public class Bird extends Animal{
+    @Override
+    public void makeSound() {
+        System.out.println("Cheep cheep!");
+    }
 }

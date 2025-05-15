@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class DealershipFileManager {
+    private final String FILE_PATH = "src/main/resources/vehicles.csv";
 
     public Dealership getDealership() {
         Dealership dealership = null;
@@ -14,7 +15,7 @@ public class DealershipFileManager {
         Scanner scanner = null;
 
         try {
-            fs = new FileInputStream("src/main/resources/vehicles.csv");
+            fs = new FileInputStream(FILE_PATH);
             scanner = new Scanner(fs);
 
             // Read first line: dealership info
