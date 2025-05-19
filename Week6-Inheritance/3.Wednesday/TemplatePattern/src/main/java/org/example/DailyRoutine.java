@@ -1,6 +1,6 @@
 package org.example;
 
-public class DailyRoutine {
+public abstract class DailyRoutine {
     //concrete methods
     public void washFace(){
         System.out.println("Washes their face");
