@@ -40,37 +40,44 @@ public class Main {
                 new Person(30, "Henry", "Martinez", "Scientist", "Illinois", 127989)
         );
 
-        //You don't always have to print to the console, but it could be helpful for testing!
-        // 1. Print the full names of all people.
+        // 1. Print the full names of all people who live in Texas.
 
-        // 2. Calculate the average yearly income of all people.
+        // 2. Print the full names of all people who are teachers.
 
-        // 3. List the professions of people living in Texas.
+        // 3. Print the full names of people who earn more than $90,000.
 
-        // 4. Find the person with the highest income.
+        // 4. Print the full names of people who live in Florida and earn less than $60,000.
 
-        // 5. Count the number of people living in California.
+        // 5. Print the full names of doctors who live in California.
 
-        // 6. Create a list of people who are not teachers.
+        // 6. Print the full names of people who do not live in New York.
 
-        // 7. Find the total income of all doctors.
+        // 7. Print the full names of engineers who earn more than $80,000.
 
-        // 8. Print the names of people with an income higher than 100000.
+        // 8. Print the full names of people who are not teachers and not doctors.
 
-        // 9. Find the average income of engineers.
+        // 9. Print the full names of people who live in Texas or Florida.
 
-        // 10. List the first names of people whose last name starts with 'S'.
+        // 10. Print the full names of people who earn between $50,000 and $100,000.
 
-        // 11. List the last names of all people who have a yearly income greater than $75,000 and live in Florida.
+        // 11. Count how many people live in Texas. (Hint: Use .count())
 
-        // 12. Find the average income of people whose profession is 'Teacher' or 'Doctor'.
+        // 12. Count how many people are doctors. (Hint: Use .count())
 
-        //What if you wanted to find the first person on the list that met some criteria?
+        // 13. Count how many people earn less than $60,000. (Hint: Use .count())
 
-        //WHo is a person that lives in Alaska
+        // 14. Count how many people are not teachers. (Hint: Use .count())
 
-        //Does anyobody live in Alaska
+        // 15. Count how many people live in California and earn more than $90,000. (Hint: Use .count())
 
-        //anyMatch's evil opposite
+        // 16. Find the average income of all people. (Hint: Use .mapToDouble(...).average())
+
+        // 17. Find the average income of teachers.
+
+        // 18. Find the average income of people who live in New York.
+
+        // 19. Find the highest income in the list. (Hint: Use .mapToDouble(...).max())
+
+        // 20. Find the highest income of anyone who is a doctor.
     }
 }
