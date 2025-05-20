@@ -105,7 +105,7 @@ public class UserInterface {
                 double maxPrice = scanner.nextDouble();
 
                 if(minPrice < maxPrice){
-                    System.out.printf("Here are all the vehicles between %d and %d", minPrice, maxPrice);
+                    System.out.printf("Here are all the vehicles between %f and %f: %n", minPrice, maxPrice);
                     List<Vehicle> vehicleList = dealership.getVehiclesByPrice(minPrice, maxPrice);
                     displayVehicles(vehicleList);
                     isGettingByPrice = false;
