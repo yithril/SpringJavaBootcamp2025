@@ -1,0 +1,3 @@
+BLT|EIGHT_INCH|white,bacon,lettuce,tomatoes,mayo
+Veggie Delight|TWELVE_INCH|wheat,lettuce,tomatoes,peppers,cucumbers,vinaigrette
+Ham & Swiss|FOUR_INCH|rye,ham,swiss,pickles,mustard
