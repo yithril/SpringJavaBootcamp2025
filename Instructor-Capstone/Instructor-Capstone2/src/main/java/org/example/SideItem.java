@@ -3,7 +3,7 @@ package org.example;
 import java.math.BigDecimal;
 import org.example.enums.SideItemType;
 
-public class SideItem {
+public class SideItem implements OrderItem {
     private int id;
     private BigDecimal price;
     private int size;
@@ -42,5 +42,10 @@ public class SideItem {
 
     public SideItemType getSideItemType() {
         return sideItemType;
+    }
+
+    @Override
+    public BigDecimal getTotal() {
+        return this.price;
     }
 }

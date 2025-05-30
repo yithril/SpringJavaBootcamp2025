@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sandwich {
+public class Sandwich implements OrderItem{
     private SandwichSize sandwichSize;
     private List<Ingredient> ingredientList;
     private String displayName;
@@ -42,6 +42,11 @@ public class Sandwich {
 
     private boolean hasBread() {
         return this.ingredientList.stream().anyMatch(ingredient -> ingredient.getIngredientType().equals(IngredientType.BREAD));
+    }
+
+    @Override
+    public BigDecimal getTotal() {
+        return getTotalPrice();
     }
 
     public static class SandwichBuilder {

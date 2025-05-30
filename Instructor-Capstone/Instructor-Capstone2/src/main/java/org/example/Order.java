@@ -2,44 +2,44 @@ package org.example;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Order {
-    private ArrayList<SideItem> sideItems;
-    private ArrayList<Sandwich> sandwiches;
+    private final List<OrderItem> items;
 
-    public Order(){
-        sideItems = new ArrayList<>();
-        sandwiches = new ArrayList<>();
+    public Order() {
+        items = new ArrayList<>();
     }
 
-    public ArrayList<SideItem> getSideItems() {
-        return sideItems;
+    public List<OrderItem> getItems() {
+        return items;
     }
 
-    public ArrayList<Sandwich> getSandwiches() {
-        return sandwiches;
+    public void addItem(OrderItem item) {
+        items.add(item);
     }
 
-    public void addSandwich(Sandwich sandwich){
-        this.sandwiches.add(sandwich);
+    public void removeItem(OrderItem item) {
+        items.remove(item);
     }
 
-    public void addSideItem(SideItem sideItem){
-        this.sideItems.add(sideItem);
+    public BigDecimal getOrderTotal() {
+        return items.stream()
+                .map(OrderItem::getTotal)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
-    public void removeSandwich(Sandwich sandwich){
-        this.sandwiches.remove(sandwich);
+    public List<Sandwich> getSandwiches() {
+        return items.stream()
+                .filter(i -> i instanceof Sandwich)
+                .map(i -> (Sandwich) i)
+                .toList();
     }
 
-    public void removeSideItem(SideItem sideItem) {
-        this.sideItems.remove(sideItem);
-    }
-
-    public BigDecimal getOrderTotal(){
-        var sandwichTotal = this.sandwiches.stream().map(x -> x.getTotalPrice()).reduce(BigDecimal.ZERO, BigDecimal::add);
-        var sideItemTotal = this.sideItems.stream().map(x -> x.getPrice()).reduce(BigDecimal.ZERO, BigDecimal::add);
-
-        return sandwichTotal.add(sideItemTotal);
+    public List<SideItem> getSideItems() {
+        return items.stream()
+                .filter(i -> i instanceof SideItem)
+                .map(i -> (SideItem) i)
+                .toList();
     }
 }

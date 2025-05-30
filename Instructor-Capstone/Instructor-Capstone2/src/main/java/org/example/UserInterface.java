@@ -133,7 +133,7 @@ public class UserInterface {
             String confirm = scanner.nextLine();
 
             if ("yes".equalsIgnoreCase(confirm) || "y".equalsIgnoreCase(confirm)) {
-                order.addSandwich(sandwich);
+                order.addItem(sandwich);
                 System.out.println("Signature sandwich added to order!");
             } else {
                 System.out.println("Sandwich not added.");
@@ -160,7 +160,7 @@ public class UserInterface {
                 Optional<SideItem> selectedSideItem = getValidSideItem(input);
                 selectedSideItem.ifPresentOrElse(
                          sideItem -> {
-                             order.addSideItem(sideItem);
+                             order.addItem(sideItem);
                              System.out.println("Adding '" + sideItem.getName());
                          },
                         () -> System.out.println("Not a valid side item, try again.")
@@ -224,7 +224,7 @@ public class UserInterface {
                 String input = scanner.nextLine().trim().toLowerCase();
 
                 if ("add".equals(input)) {
-                    order.addSandwich(sandwich);
+                    order.addItem(sandwich);
                     System.out.println("Sandwich added to order!");
                     return;
                 } else if ("rebuild".equals(input)) {
