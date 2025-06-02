@@ -1,0 +1,15 @@
+Guided Questions for the AllInOne Sheet
+"If you needed to update the email address for Greenhouse Goods, where would you make the change? Would you need to change it in one place or multiple places?"
+→ What did you find easy or awkward about that?
+
+"Imagine the customer Dana Lee changed their region from East to South. Where would you make this change? How confident are you that you updated it everywhere correctly?"
+→ How might this lead to errors?
+
+"If you wanted to sort the table by supplier, and then group products by customer within that, how easy or difficult was that using this sheet?"
+→ What challenges came up, if any?
+
+"You notice a product with a misspelled supplier name. How would you fix it? How would you verify that the supplier name is spelled consistently across the whole file?"
+→ Would this be easier with fewer columns or another structure?
+
+"What patterns of repetition did you notice in the table? Why do you think they exist? Would it make more sense to break this table up—and if so, how?"
+→ Try describing in plain terms how you'd reorganize the data.

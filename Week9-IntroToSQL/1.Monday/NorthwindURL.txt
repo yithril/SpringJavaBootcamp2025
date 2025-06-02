@@ -1,1 +1,6 @@
+Setup
 https://github.com/dalers/mywind/blob/master/northwind.sql
+
+
+Activity Sheet
+https://docs.google.com/spreadsheets/d/1vorGM4pvpfBOby5AwzBqRrpKq5ULlGH-uFen5jNtvt0/edit?usp=sharing
