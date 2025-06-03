@@ -1,14 +1,15 @@
-Warmup Question 1: List Orders with Customer Names
+You can answer these questions with just the Products table:
 
-Question:
-Write a SQL query to list the OrderID, OrderDate, and CompanyName of the customer who placed each order. Use an inner join to combine the Orders and Customers tables.
+-- 1. For each category, how many products are there? Show the CategoryID and the count.
+-- 2. For each supplier, what is the average unit price of the products they supply?
+-- 3. Which categories have more than 10 products? Show the CategoryID and the count.
+-- 4. For each discontinued status (true/false), how many products fall under each?
+-- 5. For each reorder level, what is the total number of units in stock? Only include groups where the total units in stock is greater than 300.
 
-Warmup Question 2: List Products with Supplier Names
+Review Questions:
 
-Question:
-Write a SQL query to list the ProductName and the CompanyName of the supplier for each product. Use an inner join to combine the Products and Suppliers tables.
-
-Warmup Question 3: List Employees with Orders Over $1000
-
-Question:
-Write a SQL query to list the EmployeeID, LastName, and OrderID for orders where the total order amount (Freight) is greater than $1000. 
+-- 6. List the product name, unit price, and quantity per unit for all products that cost between $20 and $30.
+-- 7. List the product name and units in stock for products with less than 10 units OR more than 100 units on hand.
+-- 8. List the product name and unit price for all products that are either '10 boxes x 20 bags' OR '24 - 500 ml bottles'.
+-- 9. List the order ID, order date, and freight for all orders placed between January 1, 1997 and March 1, 1997.
+-- 10. List the order ID and freight for orders where the freight is over $80 AND the ship country is either 'Brazil', 'Mexico', or 'Argentina'.
