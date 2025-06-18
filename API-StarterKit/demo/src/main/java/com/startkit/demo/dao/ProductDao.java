@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
+import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -121,6 +122,51 @@ public class ProductDao {
         }
 
         return false;
+    }
+
+    public List<Product> getProductsByName(String name) {
+        List<Product> products = new ArrayList<>();
+        String sql = "SELECT * FROM products WHERE ProductName LIKE ? ORDER BY ProductName";
+
+        try (
+                Connection conn = dataSource.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(sql)
+        ) {
+            stmt.setString(1, "%" + name + "%"); // partial match
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    products.add(mapRowToProduct(rs));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return products;
+    }
+
+    public List<Product> getProductsByPriceRange(BigDecimal minPrice, BigDecimal maxPrice) {
+        List<Product> products = new ArrayList<>();
+        String sql = "SELECT * FROM products WHERE UnitPrice BETWEEN ? AND ? ORDER BY UnitPrice";
+
+        try (
+                Connection conn = dataSource.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(sql)
+        ) {
+            stmt.setBigDecimal(1, minPrice);
+            stmt.setBigDecimal(2, maxPrice);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    products.add(mapRowToProduct(rs));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return products;
     }
 
     private Product mapRowToProduct(ResultSet rs) throws SQLException {

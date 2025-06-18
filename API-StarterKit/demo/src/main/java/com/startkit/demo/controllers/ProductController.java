@@ -58,4 +58,35 @@ public class ProductController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @PostMapping
+    public ResponseEntity<Product> create(@RequestBody Product product){
+        boolean created = productDao.addProduct(product);
+
+        if(created){
+            return new ResponseEntity<>(product, HttpStatus.CREATED);
+        }
+        else{
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> update(@PathVariable int id, @RequestBody Product product){
+        Product existing = productDao.getProductById(id);
+
+        if(existing == null){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        product.setProductId(id);
+        boolean updated = productDao.updateProduct(product);
+
+        if(updated){
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
